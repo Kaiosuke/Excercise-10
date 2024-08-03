@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #048fcf;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container--header {
+  margin: 1rem auto;
+  padding: 0;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0 0 100% 0;
+  transition: all 0.4s ease;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.bar {
+  position: absolute;
+  z-index: 2;
+  top: 2rem;
+  left: 2rem;
+  cursor: pointer;
+}
+
+.bar .line {
+  width: 3.2rem;
+  height: 0.5rem;
+  background: #048fcf;
+  margin-bottom: 0.3rem;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.bar .line:nth-child(1) {
+  transition: all 0.4s ease;
+}
+
+.bar .line:before {
+  content: "";
+  position: absolute;
+  width: 3.2rem;
+  height: 0.4rem;
+  background: #048fcf;
+  top: 8px;
+  right: 0px;
+  transition: all 0.4s ease;
+}
+
+.bar .line::after {
+  content: "";
+  position: absolute;
+  width: 3.2rem;
+  height: 0.4rem;
+  background: #048fcf;
+  top: -8px;
+  right: 0px;
+  transition: all 0.4s ease;
+}
+
+.link--list {
+  margin-top: 10rem;
+  position: relative;
+  z-index: 2;
+  visibility: hidden;
+  width: 15.2rem;
+}
+
+.link--list ul li {
+  width: 100%;
+}
+
+.link--list ul > li + li {
+  margin-top: 1.2rem;
+}
+
+.link--list ul li a {
+  color: #048fcf;
+  font-weight: 600;
+  width: 100%;
+  display: inline-block;
+  padding: 0.4rem 0 0.4rem 4rem;
+  transition: all 0.4s ease;
+}
+
+.introduce {
+  position: fixed;
+  right: 20rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.introduce h2 {
+  font-size: 4rem;
+}
+
+.introduce p {
+  font-weight: 100;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.introduce p span {
+  font-size: 2.2rem;
+}
+
+.container--header input:checked ~ .background {
+  width: 150vw;
+  height: 150vh;
+  border-radius: 0 0 100% 0;
+}
+
+.container--header input:checked ~ label .line {
+  border-radius: 0;
+  rotate: 180deg;
+}
+
+.container--header input:checked ~ label .line::before {
+  border-radius: 0;
+  width: 2.2rem;
+  top: 7px;
+  right: -4px;
+  rotate: -49deg;
+}
+
+.container--header input:checked ~ label .line::after {
+  border-radius: 0;
+  width: 2.2rem;
+  top: -7px;
+  right: -4px;
+  rotate: 49deg;
+}
+
+.container--header input:checked ~ .introduce {
+  visibility: hidden;
+}
+
+.container--header input:checked ~ .link--list ul li a {
+  visibility: visible;
+  z-index: 2;
+}
+
+.link--list ul li a:active,
+.link--list ul li a:focus {
+  background: #ddd;
+  color: #000;
+}

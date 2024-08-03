@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #ddd;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container--accordion {
+  width: fit-content;
+  margin: 4rem auto;
+  background: #fff;
+  perspective: 1000px;
+}
+
+.wrapper-content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.wrapper-content li {
+  transform-style: preserve-3d;
+}
+
+.content {
+  background: #fff;
+  padding: 2rem;
+  border-top: 1px solid #ddd;
+  position: absolute;
+  width: 85.3rem;
+  transition: all 0.4s ease;
+  transform-origin: top;
+  visibility: hidden;
+  opacity: 0;
+  transform: rotateX(-90deg);
+  overflow-x: scroll;
+}
+
+.content-2 {
+  left: -10rem;
+}
+
+.content-2 {
+  left: -20.5rem;
+}
+
+.content-3 {
+  left: -44.9rem;
+}
+
+.content-4 {
+  left: -65.6rem;
+}
+
+.wrapper-content li label {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  margin: 0.4rem;
+  cursor: pointer;
+}
+
+.wrapper-content li {
+  border-bottom: 1px solid #ddd;
+}
+
+.wrapper-content li:not(:last-of-type) {
+  border-right: 1px solid #ddd;
+}
+
+.wrapper-content li {
+  border-bottom: 1px solid #ddd;
+}
+
+.wrapper-content li input:checked ~ label {
+  background: #3698da;
+}
+
+.wrapper-content li input:checked ~ .content {
+  transform: rotateX(0deg);
+  transition-delay: 0.2s;
+  visibility: visible;
+  opacity: 1;
+}
