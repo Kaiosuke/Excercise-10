@@ -27,7 +27,7 @@ a {
   width: fit-content;
   margin: 4rem auto;
   background: #fff;
-  perspective: 1000px;
+  perspective: 999rem;
 }
 
 .wrapper-content {
@@ -88,6 +88,10 @@ a {
 
 .wrapper-content li {
   border-bottom: 1px solid #ddd;
+}
+
+.wrapper-content li input:hover ~ label {
+  background: #3698da;
 }
 
 .wrapper-content li input:checked ~ label {
