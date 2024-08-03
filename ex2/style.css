@@ -90,6 +90,10 @@ a {
   border-bottom: 1px solid #ddd;
 }
 
+.wrapper-content li input ~ label {
+  transition: all 0.4s ease;
+}
+
 .wrapper-content li input:hover ~ label {
   background: #3698da;
 }
